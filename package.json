@@ -1,29 +1,33 @@
 {
-  "name": "kaiatradeassistantbackend",
+  "name": "KAIATradeAssistantBackend",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HengJake/KAIATradeAssistantBackend.git"
+  "bin": {
+    "kaia-mcp": "./build/index.js"
   },
+  "files": [
+    "build"
+  ],
   "keywords": [],
   "author": "",
-  "type": "commonjs",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HengJake/KAIATradeAssistantBackend/issues"
-  },
-  "homepage": "https://github.com/HengJake/KAIATradeAssistantBackend#readme",
+  "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "@goat-sdk/adapter-model-context-protocol": "^0.2.11",
     "@goat-sdk/wallet-viem": "^0.3.0",
     "@kaiachain/kaia-agent-kit": "^0.0.16",
     "@modelcontextprotocol/sdk": "^1.17.0",
     "dotenv": "^17.2.1",
-    "ethers": "^6.15.0",
-    "viem": "^2.33.0"
+    "viem": "^2.33.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3"
   }
 }
